@@ -1,0 +1,124 @@
+:root {
+    --red: #ea5353;
+    --cyan: #45d3d3;
+    --orange: #fcaf4a;
+    --blue: #549ef2;
+    --very-dark-blue: #4c4e61;
+    --grayish-blue: #a3a5ae;
+    --very-light-gray: #fafafa;
+    --font-base: 15px;
+    --w-light: 200;
+    --w-regular: 400;
+    --w-bold: 600;
+    --s-font: 1rem;
+    --m-font: 1.1rem;
+    --l-font: 1.4rem;
+    --xl-font: clamp(1.7rem, 1rem + 2.5vw, 2.5rem);
+    --shadow: .5rem 1rem 2rem -.5rem var(--grayish-blue);
+    --min-box-size: 18rem;
+    --max-box-size: 35rem;
+    --spacing-x: .5rem;
+    --spacing-s: 1.6rem;
+    --spacing-m: 2.13rem;
+    --spacing-l: 5rem;
+}
+
+html {
+    font-size: var(--font-base);
+    font-family: "Poppins", sans-serif;
+    background-color: var(--very-light-gray);
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature {
+    margin: var(--spacing-m);
+    min-width: var(--min-box-size);
+}
+
+
+.feature__header {
+    text-align: center;
+    margin-block-end: var(--spacing-l);
+    max-width: var(--max-box-size);
+}
+
+.feature__cards {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: var(--spacing-s);
+}
+
+.feature__card {
+    box-shadow: var(--shadow);
+    padding: var(--spacing-s);
+    border-radius: .5rem;
+    border-block-start: solid .3rem;
+}
+
+.feature__card > svg {
+    float: right;
+}
+
+.feature__card--cyan {
+    border-color: var(--cyan);
+}
+
+.feature__card--red {
+    border-color: var(--red);
+}
+
+.feature__card--orange {
+    border-color: var(--orange);
+}
+
+.feature__card--blue {
+    border-color: var(--blue);
+}
+
+.feature__text {
+    color: var(--grayish-blue);
+    font-weight: var(--w-regular);
+    font-size: var(--m-font);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.feature__text--small {
+    font-weight: var(--w-light);
+    font-size: var(--s-font);
+    margin-block-end: var(--spacing-m);
+}
+
+.feature__text--large {
+    font-size: var(--l-font);
+    font-weight: var(--w-bold);
+    color: var(--very-dark-blue);
+    margin-block-end: var(--spacing-x);
+}
+
+.feature__text--extra-large {
+    line-height: 1.3;
+    font-size: var(--xl-font);
+    font-weight: var(--w-light);
+    color: var(--very-dark-blue);
+    margin-block-end: var(--spacing-s);
+}
+
+.feature__text--extra-large strong {
+    font-weight: var(--w-bold);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
