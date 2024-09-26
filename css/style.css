@@ -16,16 +16,18 @@
     --xl-font: clamp(1.7rem, 1rem + 2.5vw, 2.5rem);
     --shadow: .5rem 1rem 2rem -.5rem var(--grayish-blue);
     --min-box-size: 18rem;
-    --max-box-size: 35rem;
+    --max-box-size: 23.33rem;
+    --max-title-size: 60ch;
+    --max-paragraph-size: 36ch;
     --spacing-x: .5rem;
-    --spacing-s: 1.6rem;
+    --spacing-s: clamp(1.6rem,1rem + 2.5vw, 2rem);
     --spacing-m: 2.13rem;
     --spacing-l: 5rem;
 }
 
 html {
     font-size: var(--font-base);
-    font-family: "Poppins", sans-serif;
+    
     background-color: var(--very-light-gray);
 }
 
@@ -38,6 +40,9 @@ main {
 }
 
 .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: var(--spacing-m);
     min-width: var(--min-box-size);
 }
@@ -46,7 +51,7 @@ main {
 .feature__header {
     text-align: center;
     margin-block-end: var(--spacing-l);
-    max-width: var(--max-box-size);
+    max-width: var(--max-title-size);
 }
 
 .feature__cards {
@@ -60,6 +65,7 @@ main {
     padding: var(--spacing-s);
     border-radius: .5rem;
     border-block-start: solid .3rem;
+    max-width: var(--max-box-size);
 }
 
 .feature__card > svg {
@@ -83,6 +89,7 @@ main {
 }
 
 .feature__text {
+    font-family: "Poppins", sans-serif;
     color: var(--grayish-blue);
     font-weight: var(--w-regular);
     font-size: var(--m-font);
@@ -94,6 +101,7 @@ main {
     font-weight: var(--w-light);
     font-size: var(--s-font);
     margin-block-end: var(--spacing-m);
+    max-width: var(--max-paragraph-size);
 }
 
 .feature__text--large {
@@ -121,4 +129,27 @@ main {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 62rem) {
+    .feature__cards {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .feature__card--cyan {
+        grid-area: 2 / 1 / 4 / 2;
+    }
+
+    .feature__card--red {
+        grid-area: 1 / 2 / 3 / 3;
+    }
+
+    .feature__card--orange {
+        grid-area: 3 / 2 / 5 / 3;
+    }
+
+    .feature__card--blue {
+        grid-area: 2 / 3 / 4 / 4;
+    }
 }
