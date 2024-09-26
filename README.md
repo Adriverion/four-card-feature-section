@@ -56,4 +56,4 @@ I have learned a more complete use of custom properties and the clamp() function
 ## Author
 
 - Frontend Mentor - [@Adriverion](https://www.frontendmentor.io/profile/Adriverion)
-- Twitter - [@_Adriverion_](https://x.com/_Adriverion_)
+- Twitter - [@\_Adriverion\_](https://x.com/_Adriverion_)
