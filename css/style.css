@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --red: #ea5353;
     --cyan: #45d3d3;
@@ -17,7 +19,7 @@
     --shadow: .5rem 1rem 2rem -.5rem var(--grayish-blue);
     --min-box-size: 18rem;
     --max-box-size: 23.33rem;
-    --max-title-size: 60ch;
+    --max-title-size: 61ch;
     --max-paragraph-size: 36ch;
     --spacing-x: .5rem;
     --spacing-s: clamp(1.6rem,1rem + 2.5vw, 2rem);
@@ -27,7 +29,6 @@
 
 html {
     font-size: var(--font-base);
-    
     background-color: var(--very-light-gray);
 }
 
